@@ -110,12 +110,12 @@
         const tryAgainBtn = document.getElementById('tryAgainBtn');
         const shareBtn = document.getElementById('shareBtn');
         const prizes = [
-            { name: "iPhone 16 Pro Max", image: "assets/images/iphone.jpg" },       // Replace with your image paths
-            { name: "Laptop", image: "assets/images/laptop.jpg" },                  // Replace with your image paths
-            { name: "Car", image: "assets/images/car.jpg" },                        // Replace with your image paths
-            { name: "Gift Card", image: "assets/images/smartwacth.jpg" },           // Replace with your image paths
-            { name: "Headphones", image: "assets/images/headphone.jpg" },           // Replace with your image paths
-            { name: "Smart Watch", image: "assets/images/smartwacth.jpg" }           // Replace with your image paths
+            { name: "iPhone 16 Pro Max", image: "assets/images/iphone.jpg" },
+            { name: "Laptop", image: "assets/images/laptop.jpg" },
+            { name: "Car", image: "assets/images/car.jpg" },
+            { name: "Gift Card", image: "assets/images/smartwacth.jpg" },
+            { name: "Headphones", image: "assets/images/headphone.jpg" },
+            { name: "Smart Watch", image: "assets/images/smartwacth.jpg" }
         ];
 
         let isSpinning = false;
@@ -151,20 +151,34 @@
         }
 
         function shareResult() {
-    const gameLink = "https://www.yourwebsite.com/game"; // Replace with the actual link to your game
-    const message = `I won a ${prize.name} in the Wheel of Fortune game! 🎉🎁 Share with 20 friends to claim your prize! 🎮 Click here to play: ${gameLink}`;
+            const gameLink = "https://www.yourwebsite.com/game"; // Replace with the actual link to your game
+            const message = `I won a ${prize.name} in the Wheel of Fortune game! 🎉🎁 Share with 20 friends to claim your prize! 🎮 Click here to play: ${gameLink}`;
 
-    // URL encode the message to be shared
-    const url = `https://wa.me/?text=${encodeURIComponent(message)}`;
+            // URL encode the message to be shared
+            const url = `https://wa.me/?text=${encodeURIComponent(message)}`;
 
-    // Redirect user to WhatsApp with the message
-    window.open(url, '_blank');
-}
+            // Redirect user to WhatsApp with the message
+            window.open(url, '_blank');
+        }
 
         function restartGame() {
             // Reset the game (reload the page to start over)
             location.reload();
         }
+
+        // Handle visibility change event
+        document.addEventListener("visibilitychange", () => {
+            if (document.visibilityState === 'hidden') {
+                console.log("Game minimized");
+                // You can pause the game or hide elements here
+                // For example, you could pause the spinning animation or hide certain UI elements
+                wheel.style.transition = 'none'; // Disable the spinning animation when minimized
+            } else {
+                console.log("Game resumed");
+                // Restore the UI when the game is visible again
+                wheel.style.transition = 'transform 4s ease-out'; // Re-enable the spinning animation
+            }
+        });
     </script>
 
 </body>

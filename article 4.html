@@ -5,173 +5,194 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Easy Ways to Explore the World</title>
   <style>
-        /* General Styles */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f9;
-        }
+    /* General Styles */
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f9;
+    }
 
-        header {
-            background-color: #007BFF;
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
+    header {
+        background-color: #007BFF;
+        color: white;
+        text-align: center;
+        padding: 20px;
+    }
 
-        h1 {
-            margin: 0;
-        }
+    h1 {
+        margin: 0;
+    }
 
-        /* Content Section */
-        .content {
-            padding: 20px;
-        }
+    /* Content Section */
+    .content {
+        padding: 20px;
+    }
 
-        article {
-            background-color: #fff;
-            margin-bottom: 20px;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            opacity: 0; /* Initially hidden */
-            transform: translateY(50px); /* Initially translated */
-            animation: fadeInUp 0.8s ease-out forwards; /* Animation */
-        }
+    article {
+        background-color: #fff;
+        margin-bottom: 20px;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
 
-        h2 {
-            color: #333;
-        }
+    h2 {
+        color: #333;
+    }
 
-        .tip-image {
-            width: 400px;
-            height: auto;
-            margin-top: 15px;
-            border-radius: 8px;
-        }
+    .tip-image {
+        width: 600px; /* Set the width to 600px */
+        height: auto; /* Let the height adjust automatically to maintain aspect ratio */
+        margin-top: 15px;
+        border-radius: 8px;
+        opacity: 0; /* Initially invisible */
+        transition: opacity 1s ease-in-out; /* Smooth fade-in transition */
+    }
 
-        p {
-            color: #555;
-            line-height: 1.6;
-        }
+    p {
+        color: #555;
+        line-height: 1.6;
+    }
 
-        /* Animation keyframes */
-        @keyframes fadeInUp {
-            0% {
-                opacity: 0;
-                transform: translateY(50px);
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* Delays for each article */
-        article:nth-child(1) { animation-delay: 0.2s; }
-        article:nth-child(2) { animation-delay: 0.4s; }
-        article:nth-child(3) { animation-delay: 0.6s; }
-        article:nth-child(4) { animation-delay: 0.8s; }
-        article:nth-child(5) { animation-delay: 1s; }
-        article:nth-child(6) { animation-delay: 1.2s; }
-        article:nth-child(7) { animation-delay: 1.4s; }
-        article:nth-child(8) { animation-delay: 1.6s; }
-        article:nth-child(9) { animation-delay: 1.8s; }
-        article:nth-child(10) { animation-delay: 2s; }
-
-    </style>
-
+    /* Add a class to handle the fade-in effect */
+    .fade {
+        opacity: 1; /* Make the image visible */
+    }
+</style>
 </head>
 <body>
   <header>
     <h1>Easy Ways to Explore the World</h1>
   </header>
 
-  <section>
-    <p>Are you eager to explore the world but don't know where to start? Traveling can seem daunting, especially if you're on a budget or short on time. However, with a little creativity and planning, you can easily explore the world without breaking the bank.</p>
+  <section class="content">
+    <p>Are you eager to explore the world but don't know where to
+       start? Traveling can seem daunting, especially if you're on 
+       a budget or short on time. However, with a little creativity and planning,
+       you can easily explore the world without breaking the bank.</p>
     <p>Here are some easy ways to explore the world:</p>
 
     <div class="tips-container">
-      <div class="tip" id="tip-1">
-        <img src="assets/images/start.jpeg" alt="Explore Local">
-        <h3>1. Start Local</h3>
-        <p>Explore your own city or neighborhood. Visit local museums, try new restaurants, and take a walk in a nearby park.</p>
-      </div>
+      <!-- Tip 1 -->
+     
+      <article>
+        <h2>1. Start Local</h2>
+        <img src="assets/images/start.jpeg" alt="Spring" class="tip-image">
+        <p><b>Explore your own city or neighborhood. Visit local museums,
+          try new restaurants, and take a walk in a nearby park.</b></p>
+    </article>
 
-      <div class="tip" id="tip-2">
-        <img src="assets/images/take.jpeg" alt="Weekend Getaway">
-        <h3>2. Take a Weekend Getaway</h3>
-        <p>Look for affordable destinations within driving distance or a short flight away. You can explore a new city or town without taking too much time off work.</p>
-      </div>
+      <article>
+        <h2>2. Take a Weekend Getaway</h2>
+        <img src="assets/images/take.jpeg" alt="Spring" class="tip-image">
+        <p><b>Look for affordable destinations within driving distance or a 
+          short flight away. You can explore a new city or town without 
+          taking too much time off work.</b></p>
+    </article>
 
-      <div class="tip" id="tip-3">
-        <img src="assets/images/use.jpeg" alt="Travel Apps">
-        <h3>3. Use Travel Apps</h3>
-        <p>Apps like Google Trips, TripIt, and Skyscanner can help you plan and book your trip, find affordable accommodations, and navigate unfamiliar places.</p>
-      </div>
+      <!-- Tip 3 -->
+      
+      <article>
+        <h2>3. Use Travel Apps</h2>
+        <img src="assets/images/use.jpeg" alt="Spring" class="tip-image">
+        <p><b>Apps like Google Trips, TripIt, and Skyscanner can help 
+          you plan and book your trip, find affordable accommodations,
+           and navigate unfamiliar places.</b></p>
+    </article>
 
-      <div class="tip" id="tip-4">
-        <img src="assets/images/consider.jpeg" alt="Budget Airlines">
-        <h3>4. Consider Budget Airlines</h3>
-        <p>Budget airlines can be a cost-effective way to travel, especially for shorter distances. Just be sure to factor in any additional fees for things like checked bags or food.</p>
-      </div>
+      <!-- Tip 4 -->
+      
+      <article>
+        <h2>4. Consider Budget Airlines</h2>
+        <img src="assets/images/consider.jpeg" alt="Spring" class="tip-image">
+        <p><b>Budget airlines can be a cost-effective way to travel, 
+          especially for shorter distances. Just be sure to factor in 
+          any additional fees for things like checked bags or food.</b></p>
+    </article>
 
-      <div class="tip" id="tip-5">
-        <img src="assets/images/look.jpeg" alt="Package Deals">
-        <h3>5. Look for Package Deals</h3>
-        <p>Many travel websites offer package deals that include flights, hotels, and car rentals. These can be a convenient and affordable way to plan your trip.</p>
-      </div>
+      <!-- Tip 5 -->
+     
+      <article>
+        <h2>5. Look for Package Deals</h2>
+        <img src="assets/images/look.jpeg" alt="Spring" class="tip-image">
+        <p><b>Many travel websites offer package deals that include flights, 
+          hotels, and car rentals. These can be a convenient and affordable
+           way to plan your trip.</b></p>
+    </article>
 
-      <div class="tip" id="tip-6">
-        <img src="assets/images/travel.jpeg" alt="Off-Season Travel">
-        <h3>6. Travel During the Off-Season</h3>
-        <p>Prices for accommodations and tourist attractions often drop during the off-season. Just be sure to research any weather or other conditions that may affect your trip.</p>
-      </div>
+    
+      <article>
+        <h2>6. Travel During the Off-Season</h2>
+        <img src="assets/images/travel.jpeg" alt="Spring" class="tip-image">
+        <p><b>Prices for accommodations and tourist attractions often
+          drop during the off-season. Just be sure to research any
+           weather or other conditions that may affect your trip.</b></p>
+    </article>
 
-      <div class="tip" id="tip-7">
-        <img src="assets/images/use public.jpeg" alt="Public Transportation">
-        <h3>7. Use Public Transportation</h3>
-        <p>Instead of renting a car or taking taxis, use public transportation to get around. This can be a cost-effective and environmentally friendly way to explore a new place.</p>
-      </div>
+      <!-- Tip 7 -->
+     
+      <article>
+        <h2>7. Use Public Transportation</h2>
+        <img src="assets/images/use public.jpeg" alt="Spring" class="tip-image">
+        <p><b>Instead of renting a car or taking taxis, use 
+          public transportation to get around. This can be a
+           cost-effective and environmentally friendly way to explore a new place.</b></p>
+    </article>
 
-      <div class="tip" id="tip-8">
-        <img src="assets/images/stay.jpeg" alt="Stay with Locals">
-        <h3>8. Stay with Locals</h3>
-        <p>Consider staying with locals instead of booking a hotel room. Websites like Airbnb and Couchsurfing can connect you with hosts who can provide you with a unique and authentic experience.</p>
-      </div>
+      <!-- Tip 8 -->
+     
+      <article>
+        <h2>8. Stay with Locals</h2>
+        <img src="assets/images/stay.jpeg" alt="Spring" class="tip-image">
+        <p><b>Consider staying with locals instead of booking a
+          hotel room. Websites like Airbnb and Couchsurfing
+           can connect you with hosts who can provide you with
+            a unique and authentic experience.</b></p>
+    </article>
 
-      <div class="tip" id="tip-9">
-        <img src="assets/images/take a.jpeg" alt="Guided Tour">
-        <h3>9. Take a Guided Tour</h3>
-        <p>Guided tours can be a great way to explore a new place, especially if you're short on time. Many tour companies offer affordable and customizable tours.</p>
-      </div>
+      <!-- Tip 9 -->
+    
+      <article>
+        <h2>9. Take a Guided Tour</h2>
+        <img src="assets/images/take a.jpeg" alt="Spring" class="tip-image">
+        <p><b>Guided tours can be a great way to 
+          explore a new place, especially if you're 
+          short on time. Many tour companies offer affordable and customizable tours.</b></p>
+    </article>
+      
 
-      <div class="tip" id="tip-10">
-        <img src="assets/images/be.jpeg" alt="Be Flexible">
-        <h3>10. Be Flexible</h3>
-        <p>Finally, be flexible when it comes to your travel plans. Be open to new experiences, and don't be afraid to try new things.</p>
-      </div>
-    </div>
+    <article>
+      <h2>10. Be Flexible</h2>
+      <img src="assets/images/be.jpeg" alt="Spring" class="tip-image">
+      <p><b>Finally, be flexible when it comes to your travel plans. Be open to new experiences, and don't be afraid to try new things.</b></p>
+  </article>
   </section>
 
   <footer>
     <p>&copy; 2025 Easy Ways to Explore the World. All rights reserved.</p>
   </footer>
-
   <script>
-    // JavaScript to handle animations on page load
-    document.addEventListener("DOMContentLoaded", function() {
-      const tips = document.querySelectorAll(".tip");
+    // JavaScript for scroll-based fade-in effect
+    document.addEventListener('DOMContentLoaded', () => {
+        const images = document.querySelectorAll('.tip-image');
 
-      tips.forEach((tip, index) => {
-        // Animate the tips with a fade-in effect on page load
-        setTimeout(() => {
-          tip.style.opacity = "1";
-          tip.style.transform = "translateY(0)";
-        }, index * 300); // Staggered animation delay for each tip
-      });
+        // Function to check when images are in view
+        function checkImages() {
+            images.forEach(image => {
+                const imagePosition = image.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+
+                if (imagePosition < windowHeight - 100) {
+                    image.classList.add('fade');  // Add the 'fade' class to fade in the image
+                }
+            });
+        }
+
+        // Check images on scroll and page load
+        window.addEventListener('scroll', checkImages);
+        checkImages();  // Run initially to catch images that are in the viewport on page load
     });
-  </script>
+</script>
 </body>
 </html>

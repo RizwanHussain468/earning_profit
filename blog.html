@@ -136,6 +136,112 @@
             }
         }
 
+        /* New styles to change the text color to blue */
+        .tip h3 {
+            color: #1E90FF; /* This will change the text color to blue */
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: #008CBA;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+
+        h1 {
+            font-size: 36px;
+        }
+
+        section {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            font-size: 28px;
+            margin-top: 20px;
+        }
+
+        p {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+        .tip {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+            padding: 15px;
+            width: 300px;
+            text-align: center;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: transform 0.5s ease, opacity 1s ease-in-out;
+        }
+
+        .tip img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+
+        .tip h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .tip p {
+            font-size: 16px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+        }
+
+        footer p {
+            font-size: 14px;
+        }
+
+        .tips-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        @media (max-width: 768px) {
+            .tips-container {
+                flex-direction: column;
+            }
+
+            .tip {
+                width: 90%;
+                margin: 10px auto;
+            }
+        }
     </style>
 </head>
 <body>
@@ -155,49 +261,47 @@
         </div>
     </header>
 
-    <!-- Blog Content -->
-    <div class="gallery">
-        <!-- Blog Post 1 -->
-        <div class="image-container">
-            <div class="intro">
-                <h3>10 Tips for a Healthy and Balanced Lifestyle</h3>
-            </div>
+    <div class="tips-container">
+        <div class="tip" id="tip-1">
             <a href="article 1.html" target="_blank">
-                <img src="assets/images/drink water.jpg" class="image" alt="Blog Post 1">
+                <img src="assets/images/drink water.jpg" alt="Explore Local">
+                <h3>10 Tips for a Healthy and Balanced Lifestyle</h3>
             </a>
-        
         </div>
-        <!-- Blog Post 2 -->
-        <div class="image-container">
-            <div class="intro">
-                <h3>Travel and Tourism in Murree, Hill Station</h3>
-            </div>
+        <div class="tip" id="tip-2">
             <a href="article 2.html" target="_blank">
-                <img src="assets/images/mall road.jpg" class="image" alt="Blog Post 2">
+                <img src="assets/images/mall road.jpg" alt="Explore Local">
+                <h3>Travel and Tourism in Murree, Hill Station</h3>
             </a>
-            
+        </div>
+        <div class="tip" id="tip-3">
+            <a href="article 3.html" target="_blank">
+                <img src="assets/images/finances.jpeg" alt="Explore Local">
+                <h3>To make your business Successful, Follow these 10 tips;</h3>
+            </a>
+        </div>
+        <div class="tip" id="tip-4">
+            <a href="article 4.html" target="_blank">
+                <img src="assets/images/start.jpeg" alt="Explore Local">
+                <h3>Easy Ways to Explore the World</h3>
+            </a>
         </div>
     </div>
-    <div class="image-container">
-        <div class="intro">
-            <h3>    To make your business Successful, Follow these 10 tips;</h3>
-        </div>
-        <a href="article 3.html" target="_blank">
-            <img src="assets/images/finances.jpeg" class="image" alt="Blog Post 2">
-        </a>
-    
-    </div>
-</div>
-<div class="image-container">
-    <div class="intro">
-        <h3>    Easy Ways to Explore the World.</h3>
-    </div>
-    <a href="article 4.html" target="_blank">
-        <img src="assets/images/start.jpeg" class="image" alt="Blog Post 2">
-    </a>
 
-</div>
-</div>
+    <script>
+        // JavaScript to handle animations on page load
+        document.addEventListener("DOMContentLoaded", function() {
+            const tips = document.querySelectorAll(".tip");
+
+            tips.forEach((tip, index) => {
+                // Animate the tips with a fade-in effect on page load
+                setTimeout(() => {
+                    tip.style.opacity = "1";
+                    tip.style.transform = "translateY(0)";
+                }, index * 300); // Staggered animation delay for each tip
+            });
+        });
+    </script>
 
 </body>
 </html>
